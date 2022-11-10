@@ -1,0 +1,5 @@
+C:\Users\didru\source\repos\LostArk_M\LostArk_M\x64\Debug\LostArk_M.vcxproj.AssemblyReference.cache
+C:\Users\didru\source\repos\LostArk_M\LostArk_M\x64\Debug\LostArk_M.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\didru\source\repos\LostArk_M\LostArk_M\x64\Debug\LostArkM.MainForm.resources
+C:\Users\didru\source\repos\LostArk_M\LostArk_M\x64\Debug\LostArk_M.vcxproj.GenerateResource.cache
+C:\Users\didru\source\repos\LostArk_M\LostArk_M\x64\Debug\LostArkM.ChooseForm.resources
