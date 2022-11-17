@@ -43,7 +43,7 @@ namespace LostArkM {
 
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::FolderBrowserDialog^ folderBrowserDialog1;
 
@@ -61,17 +61,14 @@ namespace LostArkM {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->Nickname = (gcnew System::Windows::Forms::TextBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->folderBrowserDialog1 = (gcnew System::Windows::Forms::FolderBrowserDialog());
 			this->panel1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -81,7 +78,7 @@ namespace LostArkM {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label1->Location = System::Drawing::Point(12, 234);
+			this->label1->Location = System::Drawing::Point(11, 292);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(89, 22);
 			this->label1->TabIndex = 0;
@@ -95,8 +92,9 @@ namespace LostArkM {
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Location = System::Drawing::Point(-1, -1);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(494, 180);
+			this->panel1->Size = System::Drawing::Size(565, 225);
 			this->panel1->TabIndex = 1;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MainForm::panel1_Paint);
 			// 
@@ -107,7 +105,7 @@ namespace LostArkM {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label2->Location = System::Drawing::Point(330, 129);
+			this->label2->Location = System::Drawing::Point(355, 152);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(85, 24);
 			this->label2->TabIndex = 3;
@@ -123,7 +121,7 @@ namespace LostArkM {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 60, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->label3->Location = System::Drawing::Point(77, 38);
+			this->label3->Location = System::Drawing::Point(102, 61);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(338, 91);
 			this->label3->TabIndex = 3;
@@ -137,29 +135,21 @@ namespace LostArkM {
 			this->Nickname->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Nickname->ForeColor = System::Drawing::SystemColors::InactiveCaptionText;
-			this->Nickname->Location = System::Drawing::Point(107, 235);
+			this->Nickname->Location = System::Drawing::Point(117, 294);
+			this->Nickname->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->Nickname->Name = L"Nickname";
-			this->Nickname->Size = System::Drawing::Size(138, 21);
+			this->Nickname->Size = System::Drawing::Size(322, 21);
 			this->Nickname->TabIndex = 2;
 			this->Nickname->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox1_TextChanged);
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(332, 185);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(151, 117);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 3;
-			this->pictureBox1->TabStop = false;
 			// 
 			// button1
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
-			this->button1->Location = System::Drawing::Point(251, 233);
+			this->button1->Location = System::Drawing::Point(455, 290);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(86, 29);
 			this->button1->TabIndex = 4;
 			this->button1->Text = L"Login";
 			this->button1->UseVisualStyleBackColor = true;
@@ -167,21 +157,20 @@ namespace LostArkM {
 			// 
 			// MainForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(484, 311);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::White;
+			this->ClientSize = System::Drawing::Size(553, 389);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->Nickname);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label1);
-			this->MaximumSize = System::Drawing::Size(500, 350);
-			this->MinimumSize = System::Drawing::Size(500, 350);
+			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->MaximumSize = System::Drawing::Size(569, 428);
+			this->MinimumSize = System::Drawing::Size(569, 428);
 			this->Name = L"MainForm";
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

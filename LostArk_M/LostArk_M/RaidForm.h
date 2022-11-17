@@ -52,9 +52,9 @@ namespace LostArkM {
 			// 
 			// RaidForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 12);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->ClientSize = System::Drawing::Size(325, 326);
+			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->Name = L"RaidForm";
 			this->ResumeLayout(false);
 
