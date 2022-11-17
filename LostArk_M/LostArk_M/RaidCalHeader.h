@@ -16,12 +16,14 @@ namespace Cal {
 		int min_benefit; //분배금 대비 최소 이득금
 
 		int commission;
+		
 		int equal_price;
 		int equal_distribution;
 		int benefit_price;
-		int benefit_distribution;
 		int benefit;
 		int max_price;
+		//int min_benefit;
+		
 
 		/*
 		int commission = price * 0.05; //수수료
@@ -70,10 +72,9 @@ namespace Cal {
 			equal_distribution = equal_price / (num - 1); //동일 분배금
 
 			benefit_price = Benefit_distribution(price, num); //선빵 입찰가
-			benefit_distribution = benefit_price / (num - 1); //분배금
-			benefit = (price * 0.95 - benefit_price) - benefit_distribution;
+			benefit = (price * 0.95 - benefit_price) - benefit_price/(num-1);
 
-			max_price = Min_benefit(price, num, min_benefit); //최소 이득 입찰가}
+			max_price = Min_benefit(price, num, min_benefit); //최소 이득 입찰가
 		}
 
 		void MarshalString(String^ s, std::string& os) {

@@ -541,17 +541,17 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	this->three->Text = str3;
 
 	std::stringstream ssInt4; 
-	ssInt4 << aution->benefit_distribution; 
+	ssInt4 << aution->benefit; 
 	String^ str4 = gcnew String(ssInt4.str().data()); 
 	this->fore->Text = str4;
 
 	std::stringstream ssInt5;
-	ssInt5 << aution->benefit;
+	ssInt5 << aution->max_price;
 	String^ str5 = gcnew String(ssInt5.str().data()); 
 	this->five->Text = str5;
 
 	std::stringstream ssInt6;
-	ssInt6 << aution->max_price;
+	ssInt6 << aution->min_benefit;
 	String^ str6 = gcnew String(ssInt6.str().data()); 
 	this->six->Text = str6;
 }

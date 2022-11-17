@@ -34,7 +34,6 @@ Class Cal.Auction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 equal_price : Public
     Int32 equal_distribution : Public
     Int32 benefit_price : Public
-    Int32 benefit_distribution : Public
     Int32 benefit : Public
     Int32 max_price : Public
   Methods:
