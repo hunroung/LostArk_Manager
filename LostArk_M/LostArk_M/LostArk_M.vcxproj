@@ -137,6 +137,7 @@
     <ClInclude Include="RaidCalForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RaidCalHeader.h" />
     <ClInclude Include="RaidForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
