@@ -96,6 +96,7 @@ namespace LostArkM {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RaidCalForm::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->remove1 = (gcnew System::Windows::Forms::Button());
@@ -483,6 +484,7 @@ namespace LostArkM {
 			this->Controls->Add(this->remove1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->MaximumSize = System::Drawing::Size(700, 600);
 			this->MinimumSize = System::Drawing::Size(700, 600);
