@@ -360,6 +360,7 @@ namespace LostArkM {
 		nomal_simul->legend_nomal();
 		nomal_simul->count++;
 		this->label4->Text = nomal_simul->result;
+		this->label8->Text = "";
 		this->label6->Text = nomal_simul->legend_count + " Àå";
 		this->label7->Text = nomal_simul->hero_count + " Àå";
 		this->label11->Text = nomal_simul->rare_count + " Àå";

@@ -12,6 +12,9 @@ namespace Rock {
 		int abil1_count = 0;
 		int abil2_count = 0;
 		int abil3_count = 0;
+		int abil1_success_count = 0;
+		int abil2_success_count = 0;
+		int abil3_success_count = 0;
 		int p = 75;
 		Rocksimulator() {
 			srand((unsigned int)time(NULL));
