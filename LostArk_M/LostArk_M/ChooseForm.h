@@ -76,6 +76,7 @@ namespace LostArkM {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ChooseForm::typeid));
 			this->Nickname = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
@@ -175,6 +176,7 @@ namespace LostArkM {
 			this->Controls->Add(this->raid);
 			this->Controls->Add(this->gackin);
 			this->Controls->Add(this->panel1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->MaximumSize = System::Drawing::Size(569, 426);
 			this->MinimumSize = System::Drawing::Size(569, 426);
@@ -198,19 +200,19 @@ private: System::Void gackin_Click(System::Object^ sender, System::EventArgs^ e)
 	GackinForm^ gackinform = gcnew GackinForm();
 	this->Hide();
 	gackinform->ShowDialog();
-	this->Close();
+	this->Show();
 }
 private: System::Void raid_Click(System::Object^ sender, System::EventArgs^ e) { // 레이드 공략 버튼 클릭시
 	RaidForm^ raidform = gcnew RaidForm();
 	this->Hide();
 	raidform->ShowDialog();
-	this->Close();
+	this->Show();
 }
 private: System::Void cal_Click(System::Object^ sender, System::EventArgs^ e) { // 레이드 경매장 계산기 벝튼 클릭시
 	RaidCalForm^ raidcalform = gcnew RaidCalForm();
 	this->Hide();
 	raidcalform->ShowDialog();
-	this->Close();
+	this->Show();
 }
 };
 }

@@ -61,6 +61,7 @@ namespace LostArkM {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -164,6 +165,7 @@ namespace LostArkM {
 			this->Controls->Add(this->Nickname);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->MaximumSize = System::Drawing::Size(569, 428);
 			this->MinimumSize = System::Drawing::Size(569, 428);
