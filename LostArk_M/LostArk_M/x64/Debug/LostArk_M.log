@@ -1,5 +1,6 @@
 ﻿  Gackin.cpp
   The contents of <filesystem> are available only with C++17 or later.
-E:\nnnn\LostArk_Manager\LostArk_M\LostArk_M\Gackin.cpp(101,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\nnnn\LostArk_Manager\LostArk_M\LostArk_M\Gackin.cpp(96,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\nnnn\LostArk_Manager\LostArk_M\LostArk_M\Gackin.cpp(113,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   Gackin.obj : MSIL 모듈이 발견되었습니다. MSIL에 증분 링크를 사용할 수 없습니다. 전체 링크를 수행하고 있습니다.
   LostArk_M.vcxproj -> E:\nnnn\LostArk_Manager\LostArk_M\x64\Debug\LostArk_M.exe

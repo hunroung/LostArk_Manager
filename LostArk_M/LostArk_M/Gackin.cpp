@@ -42,12 +42,13 @@ Char_info::Char_info(char* user_name)
     int chcount = 0;
     fp.getline(oneC, MAX_NAME_LENGTH);
     std::string nn(user_name);
+    int cmp = 0;
     while (chcount < total_char_count && chcount < 24 && !fp.eof())
     {
         fp.getline(oneC, MAX_NAME_LENGTH);
         std::string s(oneC);
-        if (nn.compare(s) == 0) {
-            chcount = total_char_count - 1;
+        if (nn.compare(s) == 0 ) {
+            cmp++;
         }
 
         if (strcmp(oneC, ch) == 0) {
@@ -75,14 +76,25 @@ Char_info::Char_info(char* user_name)
             chcount++;
 
         }
+        if (cmp == 2)
+        {
+            for (int i = 0; i < MAX_NAME_LENGTH; i++) {
+                name[chcount - 1][i] = '\n';
+            }
+            break;
+        }
     }
     if (fp.eof()) {
         errorcode = 1;
         fp.close();
         return;
     }
-    fp.getline(main_char, MAX_NAME_LENGTH);
-
+    if (cmp != 2) {
+        fp.getline(main_char, MAX_NAME_LENGTH);
+    }
+    else {
+        strcpy(main_char, user_name);
+    }
     fp.getline(itemlevel, MAX_ITEM_LENGTH);
 
     fp >> damage;
