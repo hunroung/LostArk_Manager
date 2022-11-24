@@ -1,50 +1,74 @@
-
+#include <stdio.h>
+#include <fstream>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <process.h>
 // LostArk character class
 class Char_info {
   public:
-    static const int MAX_JOB_LENGTH = 15;      //ì§ì—… ì´ë¦„ ìµœëŒ€ ê¸¸ì´
-    static const int MAX_identify_LENGTH = 30; //í´ë˜ìŠ¤ ì´ë¦„ ìµœëŒ€ ê¸¸ì´
-    static const int MAX_NAME_LENGTH = 30;     //ìºë¦­í„° ì´ë¦„ ìµœëŒ€ ê¸¸ì´
-    static const int MAX_CHAR_LENGTH = 24;     //ìºë¦­í„° ìµœëŒ€ ê°œìˆ˜
-    static const int MAX_SERVER_COUNT = 8;     //ì„œë²„ ìµœëŒ€ ê°œìˆ˜
+    static const int MAX_JOB_LENGTH = 15;      //Á÷¾÷ ÀÌ¸§ ÃÖ´ë ±æÀÌ
+    static const int MAX_identify_LENGTH = 30; //Å¬·¡½º ÀÌ¸§ ÃÖ´ë ±æÀÌ
+    static const int MAX_NAME_LENGTH = 30;     //Ä³¸¯ÅÍ ÀÌ¸§ ÃÖ´ë ±æÀÌ
+    static const int MAX_CHAR_LENGTH = 24;     //Ä³¸¯ÅÍ ÃÖ´ë °³¼ö
+    static const int MAX_SERVER_COUNT = 8;     //¼­¹ö ÃÖ´ë °³¼ö
+    static const int MAX_ITEM_LENGTH = 30;
     Char_info(char *user_name);
-
+    char* p_main_name() { return main_char; }
+    char* p_all_name() { return (char*)name; }
+    char* p_job() { return job; }
+    char* p_main_server() { return server[0]; }
+    char* p_item_level() { return itemlevel; }
+    int p_damage() { return damage; }
+    int p_hp() { return hp; }
+    int p_critical() { return critical; }
+    int p_specialization() { return specialization; }
+    int p_swiftness() { return swiftness; }
+    int p_domination() { return domination; }
+    int p_endurance() { return endurance; }
+    int p_expertise() { return expertise; }
+    char* p_level() { return level; }
+    char* p_gackin_name() { return (char*)gackin_name; }
   private:
-    int total_char;
-    char job[MAX_JOB_LENGTH];                      //ì§ì—…
-    char identify[MAX_identify_LENGTH];            //í´ë˜ìŠ¤
-    int total_char_count;                          //ìºë¦­í„° ìˆ˜
-    char server[MAX_SERVER_COUNT][MAX_JOB_LENGTH]; //ì„œë²„ ì´ë¦„
-    char server_char_count[MAX_CHAR_LENGTH];       //ì„œë²„ ìºë¦­í„° ìˆ˜
-    char name[MAX_CHAR_LENGTH][MAX_NAME_LENGTH];   //ì´ë¦„
-    char main_char[MAX_NAME_LENGTH];               //ë©”ì¸ ìºë¦­í„°
-    char itemlevel[MAX_NAME_LENGTH];               //ì•„ì´í…œë ˆë²¨
-    int damage;                                    //ê³µê²©ë ¥
-    int hp;                                        //ìƒëª…ë ¥
-    int critical;                                  //ì¹˜ëª…
-    int specialization;                            //íŠ¹í™”
-    int swiftness;                                 //ì‹ ì†
-    int domination;                                //ì œì••
-    int endurance;                                 //ì¸ë‚´
-    int expertise;                                 //ìˆ™ë ¨
-    char level[MAX_NAME_LENGTH];                   //ë ˆë²¨
-    Gackin_info gackin;                            //ê°ì¸ì •ë³´
+    char job[MAX_JOB_LENGTH];                      //Á÷¾÷
+    int total_char_count;                          //Ä³¸¯ÅÍ ¼ö
+    char server[MAX_SERVER_COUNT][MAX_JOB_LENGTH]; //¼­¹ö ÀÌ¸§
+    int server_char_count[MAX_CHAR_LENGTH] = { 0 };       //¼­¹ö Ä³¸¯ÅÍ ¼ö
+    char name[MAX_CHAR_LENGTH][MAX_NAME_LENGTH];   //ÀÌ¸§
+    char main_char[MAX_NAME_LENGTH];               //¸ŞÀÎ Ä³¸¯ÅÍ
+    char itemlevel[MAX_ITEM_LENGTH];               //¾ÆÀÌÅÛ·¹º§
+    int damage;                                    //°ø°İ·Â
+    int hp;                                        //»ı¸í·Â
+    int critical;                                  //Ä¡¸í
+    int specialization;                            //Æ¯È­
+    int swiftness;                                 //½Å¼Ó
+    int domination;                                //Á¦¾Ğ
+    int endurance;                                 //ÀÎ³»
+    int expertise;                                 //¼÷·Ã
+    char level[MAX_NAME_LENGTH];                   //·¹º§
+    char gackin_name[8][MAX_NAME_LENGTH];                            //°¢ÀÎÁ¤º¸
+    int gackin_count = 0;
+    int servercount = 0;
 };
 
 class Gackin_info {
   public:
-    static const int MAX_NAME_LENGTH = 30; //ê°ì¸ ìµœëŒ€ ê°œìˆ˜
-    int gackin_count = 0;                  //ê°ì¸ ê°œìˆ˜
-    int gackin_level;                      //ê°ì¸ ë ˆë²¨ (ìµœëŒ€ 15)
-    char gackin_name[8][MAX_NAME_LENGTH];  //ê°ì¸ ì´ë¦„
+    Gackin_info(char * job_gackin);
+    static const int MAX_NAME_LENGTH = 30; //°¢ÀÎ ÃÖ´ë °³¼ö
+    int gackin_count = 0;                  //°¢ÀÎ °³¼ö
+    int gackin_level;                      //°¢ÀÎ ·¹º§ (ÃÖ´ë 15)
+    char gackin_name[8][MAX_NAME_LENGTH];  //°¢ÀÎ ÀÌ¸§
 };
-class Gackin_cmp : Gackin_info {};
+
 
 class Gungdangjang {
   public:
-    static const int MAX_NAME_LENGTH = 20; //ì´ë¦„ ìµœëŒ€ê°’
+    static const int MAX_NAME_LENGTH = 20; //ÀÌ¸§ ÃÖ´ë°ª
 
   private:
-    char name[MAX_NAME_LENGTH];       //ì´ë¦„
-    char difficulty[MAX_NAME_LENGTH]; //ë‚œì´ë„
+    char name[MAX_NAME_LENGTH];       //ÀÌ¸§
+    char difficulty[MAX_NAME_LENGTH]; //³­ÀÌµµ
 };
+
+void mkfile(char* name);
