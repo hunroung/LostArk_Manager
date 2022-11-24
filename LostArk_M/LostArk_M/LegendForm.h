@@ -253,11 +253,11 @@ namespace LostArkM {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::White;
-			this->label5->Location = System::Drawing::Point(117, 10);
+			this->label5->Location = System::Drawing::Point(150, 10);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(161, 31);
+			this->label5->Size = System::Drawing::Size(135, 31);
 			this->label5->TabIndex = 0;
-			this->label5->Text = L"Àü¼³ Ä«µå ÆÑ II";
+			this->label5->Text = L"Àü¼³ Ä«µå ÆÑ";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// label9
