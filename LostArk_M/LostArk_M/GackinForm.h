@@ -22,6 +22,7 @@ namespace LostArkM {
 			//TODO: 생성자 코드를 여기에 추가합니다.
 			//
 		}
+		int i = 1; // 돌깎기 테스트용 변수
 
 	protected:
 		/// <summary>
@@ -34,6 +35,11 @@ namespace LostArkM {
 				delete components;
 			}
 		}
+
+	protected:
+
+
+
 
 	private:
 		/// <summary>
@@ -62,5 +68,11 @@ namespace LostArkM {
 
 		}
 #pragma endregion
-	};
+	private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+};
 }

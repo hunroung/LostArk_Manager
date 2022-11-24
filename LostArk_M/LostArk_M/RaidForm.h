@@ -35,6 +35,8 @@ namespace LostArkM {
 			}
 		}
 
+	protected:
+
 	private:
 		/// <summary>
 		/// 필수 디자이너 변수입니다.
@@ -62,5 +64,7 @@ namespace LostArkM {
 
 		}
 #pragma endregion
+	private: System::Void pictureBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }

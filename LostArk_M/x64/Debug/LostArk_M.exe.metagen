@@ -1,8 +1,10 @@
+  LostArkM.CardSimulForm1.resources - Embedded, ContainedInManifestFile, 
   LostArkM.ChooseForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.GackinForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.MainForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.RaidCalForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.RaidForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.SimulForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly LostArk_M, Version=0.0.*, Culture=고정 언어(고정 국가): 
 	hash=SHA1, flags=PublicKey
@@ -18,9 +20,30 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class Card.Cardsimulator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String legend : Public
+    System.String abyss_legend : Public
+    System.String hero : Public
+    System.String rare : Public
+    System.String advanced : Public
+    System.String nomal : Public
+    System.String result : Public
+  Methods:
+    legend_hero(): PrivateScope, Public, HideBySig
+    legend_rare(): PrivateScope, Public, HideBySig
+    legend_nomal(): PrivateScope, Public, HideBySig
+    legend_card(): PrivateScope, Public, HideBySig
+    abyss_card(): PrivateScope, Public, HideBySig
+Class LostArkM.CardSimulForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class LostArkM.GackinForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 i : Public
 Class LostArkM.RaidForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -44,6 +67,9 @@ Class Cal.Auction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     MarshalString(String, basic_string<wchar_t\,std::char_traits<wchar_t>\,std::allocator<wchar_t> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
     MarshalString(String, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
 Class LostArkM.RaidCalForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.SimulForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class LostArkM.ChooseForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

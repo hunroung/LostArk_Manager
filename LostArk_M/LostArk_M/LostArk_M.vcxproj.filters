@@ -18,6 +18,9 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CardSimulForm1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -36,6 +39,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="RaidCalHeader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CardSimulHeader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CardSimulForm1.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

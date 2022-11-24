@@ -142,6 +142,7 @@ namespace LostArkM {
 			this->Nickname->Size = System::Drawing::Size(322, 21);
 			this->Nickname->TabIndex = 2;
 			this->Nickname->TextChanged += gcnew System::EventHandler(this, &MainForm::textBox1_TextChanged);
+			this->Nickname->Enter += gcnew System::EventHandler(this, &MainForm::Nickname_Enter);
 			// 
 			// button1
 			// 
@@ -191,10 +192,12 @@ private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) { // 버튼을 클릭시에 Nickname을 전송하고 ChooseForm 실행
-	ChooseForm^ chooseform = gcnew ChooseForm(this->Nickname->Text); 
+	ChooseForm^ chooseform = gcnew ChooseForm(this->Nickname->Text);
 	this->Hide(); // 로그인창을 숨김
 	chooseform->ShowDialog(); // chooseform 실행
 	this->Close(); // 로그인창 닫기
+}
+private: System::Void Nickname_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

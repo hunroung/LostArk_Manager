@@ -11,3 +11,5 @@ C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\x64\Debug\LostArkM.MainForm.r
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\x64\Debug\LostArkM.RaidCalForm.resources
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\x64\Debug\LostArkM.RaidForm.resources
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\x64\Debug\LostArk_M.vcxproj.GenerateResource.cache
+C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\x64\Debug\LostArkM.CardSimulForm1.resources
+C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\x64\Debug\LostArkM.SimulForm.resources

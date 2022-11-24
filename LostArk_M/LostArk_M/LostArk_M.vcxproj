@@ -122,9 +122,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CardSimulForm1.cpp" />
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CardSimulForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CardSimulHeader.h" />
     <ClInclude Include="ChooseForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -141,8 +146,14 @@
     <ClInclude Include="RaidForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SimulForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CardSimulForm1.resx">
+      <DependentUpon>CardSimulForm1.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseForm.resx">
       <DependentUpon>ChooseForm.h</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RaidForm.resx">
       <DependentUpon>RaidForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulForm.resx">
+      <DependentUpon>SimulForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
