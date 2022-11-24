@@ -58,9 +58,12 @@ namespace LostArkM {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->Name = L"RaidForm";
+			this->Load += gcnew System::EventHandler(this, &RaidForm::RaidForm_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void RaidForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }

@@ -489,6 +489,7 @@ namespace LostArkM {
 			this->MaximumSize = System::Drawing::Size(700, 600);
 			this->MinimumSize = System::Drawing::Size(700, 600);
 			this->Name = L"RaidCalForm";
+			this->Load += gcnew System::EventHandler(this, &RaidCalForm::RaidCalForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
@@ -556,6 +557,8 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	ssInt6 << aution->min_benefit;
 	String^ str6 = gcnew String(ssInt6.str().data()); 
 	this->six->Text = str6;
+}
+private: System::Void RaidCalForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
