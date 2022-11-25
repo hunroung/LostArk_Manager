@@ -1,5 +1,5 @@
 # 개발 진척도
-<p align="center">![My project-1 (2)](https://user-images.githubusercontent.com/56543424/203941541-81c18c18-4022-4169-bcf5-90e41b085025.png)</p>
+![My project-1 (2)](https://user-images.githubusercontent.com/56543424/203941541-81c18c18-4022-4169-bcf5-90e41b085025.png)
 
 
 ## 각인 추천 기능
