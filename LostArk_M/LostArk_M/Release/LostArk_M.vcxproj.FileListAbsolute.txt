@@ -1,0 +1,17 @@
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArk_M.vcxproj.AssemblyReference.cache
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArk_M.vcxproj.SuggestedBindingRedirects.cache
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.AbyssForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.Card_le_advancedForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.Card_le_heroForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.Card_le_nomalForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.Card_le_rareForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.ChooseForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.GackinForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.LegendForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.MainForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.ProfileForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.RaidCalForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.RaidForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.RockForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArkM.SimulForm.resources
+E:\Release_test\LostArk_Manager\LostArk_M\LostArk_M\Release\LostArk_M.vcxproj.GenerateResource.cache

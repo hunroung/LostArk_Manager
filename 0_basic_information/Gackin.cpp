@@ -93,7 +93,11 @@ Char_info::Char_info(char* user_name)
         fp.getline(main_char, MAX_NAME_LENGTH);
     }
     else {
+<<<<<<< HEAD
         strcpy_s(main_char, user_name);
+=======
+        strcpy(main_char, user_name);
+>>>>>>> 8b8537b04e6f15e9cb117ec72c5b68d04e6061ca
     }
     fp.getline(itemlevel, MAX_ITEM_LENGTH);
 
@@ -110,7 +114,11 @@ Char_info::Char_info(char* user_name)
         fp.getline(level, 20);
     }
     else {
+<<<<<<< HEAD
         strcpy_s(level, oneC);
+=======
+        strcpy(level, oneC);
+>>>>>>> 8b8537b04e6f15e9cb117ec72c5b68d04e6061ca
     }
     
     gackin_count = 0;
@@ -129,7 +137,11 @@ Gackin_info::Gackin_info(char* job_gackin) {
     strcat_s(filename, job_gackin);
     strcat_s(filename, ".txt");
     std::ifstream fp;
+<<<<<<< HEAD
 
+=======
+    std::cout << filename << std::endl;
+>>>>>>> 8b8537b04e6f15e9cb117ec72c5b68d04e6061ca
     fp.open(filename);
     if (fp.fail()) {
         std::cerr << "파일을 찾을 수 없음 error" << std::endl;
@@ -138,12 +150,18 @@ Gackin_info::Gackin_info(char* job_gackin) {
     int i = 0;
     char user[10][50];
     while (!fp.eof() || i < 10) {
+<<<<<<< HEAD
         fp.getline(user[i], 50);
 
+=======
+        fp >> user[i];
+        std::cout << user[i] << std::endl;
+>>>>>>> 8b8537b04e6f15e9cb117ec72c5b68d04e6061ca
         i++;
     }
     fp.close();
 
+<<<<<<< HEAD
     char ranker_path[256] = ".\\Ranker\\";
     strcat_s(ranker_path, job_gackin);
     strcat_s(ranker_path, "\\gackin_info_");
@@ -172,4 +190,13 @@ Gackin_info::Gackin_info(char* job_gackin) {
 
     }
    
+=======
+    i = 0;
+    while (i < 10) {
+        char path[100] = ".\\job\\user\\gackin_info_scriper.exe ";
+        strcat_s(path, user[i]);
+        std::system(path);
+        i++;
+    }
+>>>>>>> 8b8537b04e6f15e9cb117ec72c5b68d04e6061ca
 }

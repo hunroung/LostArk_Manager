@@ -1,0 +1,144 @@
+  LostArkM.AbyssForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.Card_le_advancedForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.Card_le_heroForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.Card_le_nomalForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.Card_le_rareForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.ChooseForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.GackinForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.LegendForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.MainForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.ProfileForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.RaidCalForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.RaidForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.RockForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.SimulForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly LostArk_M, Version=0.0.*, Culture=고정 언어(고정 국가): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Cal.Auction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double price : Public
+    Int32 num : Public
+    Int32 min_benefit : Public
+    Int32 commission : Public
+    Int32 equal_price : Public
+    Int32 equal_distribution : Public
+    Int32 benefit_price : Public
+    Int32 benefit : Public
+    Int32 max_price : Public
+  Methods:
+    Equal_distribution(Double, Int32): PrivateScope, Public, HideBySig
+    Benefit_distribution(Double, Int32): PrivateScope, Public, HideBySig
+    Min_benefit(Double, Int32, Int32): PrivateScope, Public, HideBySig
+    AllCal(): PrivateScope, Public, HideBySig
+    MarshalString(String, basic_string<wchar_t\,std::char_traits<wchar_t>\,std::allocator<wchar_t> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+    MarshalString(String, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig
+Class LostArkM.GackinForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.RaidForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.RaidCalForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.ProfileForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Card.Cardsimulator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String legend : Public
+    System.String abyss_legend : Public
+    System.String hero : Public
+    System.String rare : Public
+    System.String advanced : Public
+    System.String nomal : Public
+    System.String result : Public
+    Int32 legend_count : Public
+    Int32 hero_count : Public
+    Int32 rare_count : Public
+    Int32 advanced_count : Public
+    Int32 nomal_count : Public
+    Int32 count : Public
+    Int32 legend1 : Public
+    Int32 legend2 : Public
+    Int32 legend3 : Public
+    Int32 legend4 : Public
+    Int32 legend5 : Public
+    Int32 legend6 : Public
+    Int32 legend7 : Public
+    Int32 legend8 : Public
+    Int32 legend9 : Public
+    Int32 legend10 : Public
+    Int32 legend11 : Public
+    Int32 legend12 : Public
+    Int32 legend13 : Public
+    Int32 legend14 : Public
+    Int32 legend15 : Public
+    Int32 legend16 : Public
+    Int32 legend17 : Public
+    Int32 legend18 : Public
+    Int32 legend19 : Public
+  Methods:
+    legend_hero(): PrivateScope, Public, HideBySig
+    legend_rare(): PrivateScope, Public, HideBySig
+    legend_advanced(): PrivateScope, Public, HideBySig
+    legend_nomal(): PrivateScope, Public, HideBySig
+    legend_card(): PrivateScope, Public, HideBySig
+Class LostArkM.Card_le_heroForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.Card_le_rareForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.Card_le_advancedForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.Card_le_nomalForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.LegendForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.AbyssForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Rock.Rocksimulator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 abil1_count : Public
+    Int32 abil2_count : Public
+    Int32 abil3_count : Public
+    Int32 abil1_success_count : Public
+    Int32 abil2_success_count : Public
+    Int32 abil3_success_count : Public
+    Int32 p : Public
+  Methods:
+    rock_simul(): PrivateScope, Public, HideBySig
+Class LostArkM.RockForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.SimulForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.ChooseForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
