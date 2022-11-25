@@ -86,6 +86,7 @@
 	f = open(txtfile_url, 'w')
 	f.write(soup.select('.profile-character-count em')[0].text)
 	f.close()```
+	
 #### 파생된 프로그램 - `gackin_info_scriper.py`
 #### 기여자 `광운대학교 양경원`
 
@@ -136,9 +137,10 @@
 			return bid_price;
 		}
     ```
+    
 #### 기여자 `광운대학교 장시원`
 ## 시뮬레이션 `CardSimulHeader.h`  `card_simulator.cpp`
-### 코드 
+### 코드 구현
 1. `RockHeader.h` 어빌리티 스톤 세공 시뮬레이터로 성공, 실패 시마다 10%의 확률 변동이 일어난다.
 
     ```C++
@@ -161,6 +163,7 @@
     ```
 
 2. `CardSimulHeader.h` 카드 시뮬레이터로 카드 팩 별로 정해진 확률에 따라 카드를 반환한다.
+
     ```C++
     void legend_hero() //전설 ~ 영웅 카드 팩
 		{
@@ -194,7 +197,73 @@
 		}
     ...
     ```
- #### 기여자 `광운대학교 장시원`
+#### 기여자 `광운대학교 장시원`
   
 
- 
+## 캐릭터 프로필, 각인 `Gackin.cpp`  `Gackin.h`
+### 코드 구현
+1. 캐릭터 정보 생성시 캐릭터 이름을 전달받는다. 이 때 해당 캐릭터 정보 파일이 없으면 스크래핑 해온다.
+
+	```C++
+	void mkfile(char* name) {
+    	char path[50] = ".\\character_info_scriper.exe ";
+    	strcat_s(path, name);
+    	std::system(path);
+	}
+	```
+2. 파일이 존재할 경우( 혹은 1. 이후 ) txt 파일 양식에 맞춰 정보를 받아온다.
+
+	```C++
+	....
+	 if (oneC[0] == '@')   // @으로 시작할 경우 서버 이름
+        {
+
+            for (int i = 0; i < MAX_JOB_LENGTH; i++)
+            {
+                server[servercount][i] = oneC[i];
+            }
+            servercount++;
+
+
+        }
+        else                   // 아닐 경우 캐릭터 이름
+        {
+            for (int i = 0; i < MAX_NAME_LENGTH; i++)
+            {
+                name[chcount][i] = oneC[i];
+            }
+            server_char_count[servercount]++;
+            chcount++;
+
+        }
+	....
+	```
+3. 캐릭터 프로필 양식 `Gackin.h`
+
+	```C++
+	....
+	private:
+        char job[MAX_JOB_LENGTH];                      //직업
+        int total_char_count;                          //캐릭터 수
+        char server[MAX_SERVER_COUNT][MAX_JOB_LENGTH]; //서버 이름
+        int server_char_count[MAX_CHAR_LENGTH] = { 0 };//서버 캐릭터 수
+        char name[MAX_CHAR_LENGTH][MAX_NAME_LENGTH];   //이름
+        char main_char[MAX_NAME_LENGTH];               //메인 캐릭터
+        char itemlevel[MAX_ITEM_LENGTH];               //아이템레벨
+        int damage;                                    //공격력
+        int hp;                                        //생명력
+        int critical;                                  //치명
+        int specialization;                            //특화
+        int swiftness;                                 //신속
+        int domination;                                //제압
+        int endurance;                                 //인내
+        int expertise;                                 //숙련
+        char level[MAX_NAME_LENGTH];                   //레벨
+        char gackin_name[8][MAX_NAME_LENGTH];          //각인정보
+        int gackin_count = 0;                          //각인 갯수
+        int servercount = 0;                           //서버 갯수
+        int errorcode = 0;			       //에러 flag
+	....
+	```
+	
+	
