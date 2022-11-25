@@ -46,8 +46,8 @@
    * 자세한 구현 설명이 필요하신 분들은 구현 설명란에서 확인 가능합니다.
    
 # 사용 설명
-<p align="center"><img src="https://user-images.githubusercontent.com/56543424/203975007-6ad398cf-7c4e-4565-b0cd-b8ff1fc01503.png" width="100%" height="100%"></p>
-<p align="center"><img src="https://user-images.githubusercontent.com/56543424/203975017-b94ddef1-787e-4870-9d53-eb09d0c40c77.png" width="100%" height="100%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/56543424/204002047-a138cebd-369d-4f28-ba7c-a072859953f5.png" width="100%" height="100%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/56543424/204001655-2deece01-95c6-4ecb-9ed0-6d19ff7cfdcc.png" width="100%" height="100%"></p>
 
 
 
@@ -86,6 +86,7 @@
 	f = open(txtfile_url, 'w')
 	f.write(soup.select('.profile-character-count em')[0].text)
 	f.close()```
+	
 #### 파생된 프로그램 - `gackin_info_scriper.py`
 #### 기여자 `광운대학교 양경원`
 
@@ -136,9 +137,10 @@
 			return bid_price;
 		}
     ```
+    
 #### 기여자 `광운대학교 장시원`
 ## 시뮬레이션 `CardSimulHeader.h`  `card_simulator.cpp`
-### 코드 
+### 코드 구현
 1. `RockHeader.h` 어빌리티 스톤 세공 시뮬레이터로 성공, 실패 시마다 10%의 확률 변동이 일어난다.
 
     ```C++
@@ -161,6 +163,7 @@
     ```
 
 2. `CardSimulHeader.h` 카드 시뮬레이터로 카드 팩 별로 정해진 확률에 따라 카드를 반환한다.
+
     ```C++
     void legend_hero() //전설 ~ 영웅 카드 팩
 		{
@@ -194,7 +197,205 @@
 		}
     ...
     ```
- #### 기여자 `광운대학교 장시원`
+#### 기여자 `광운대학교 장시원`
   
 
- 
+## 캐릭터 프로필, 각인 `Gackin.cpp`  `Gackin.h`
+### 코드 구현
+1. 캐릭터 정보 생성시 캐릭터 이름을 전달받는다. 이 때 해당 캐릭터 정보 파일이 없으면 스크래핑 해온다.
+
+	```C++
+	void mkfile(char* name) {
+    	char path[50] = ".\\character_info_scriper.exe ";
+    	strcat_s(path, name);
+    	std::system(path);
+	}
+	```
+2. 파일이 존재할 경우( 혹은 1. 이후 ) txt 파일 양식에 맞춰 정보를 받아온다.
+
+	```C++
+	....
+	 if (oneC[0] == '@')   // @으로 시작할 경우 서버 이름
+        {
+
+            for (int i = 0; i < MAX_JOB_LENGTH; i++)
+            {
+                server[servercount][i] = oneC[i];
+            }
+            servercount++;
+
+
+        }
+        else                   // 아닐 경우 캐릭터 이름
+        {
+            for (int i = 0; i < MAX_NAME_LENGTH; i++)
+            {
+                name[chcount][i] = oneC[i];
+            }
+            server_char_count[servercount]++;
+            chcount++;
+
+        }
+	....
+	```
+3. 캐릭터 프로필 양식 `Gackin.h`
+
+	```C++
+	....
+	private:
+        char job[MAX_JOB_LENGTH];                      //직업
+        int total_char_count;                          //캐릭터 수
+        char server[MAX_SERVER_COUNT][MAX_JOB_LENGTH]; //서버 이름
+        int server_char_count[MAX_CHAR_LENGTH] = { 0 };//서버 캐릭터 수
+        char name[MAX_CHAR_LENGTH][MAX_NAME_LENGTH];   //이름
+        char main_char[MAX_NAME_LENGTH];               //메인 캐릭터
+        char itemlevel[MAX_ITEM_LENGTH];               //아이템레벨
+        int damage;                                    //공격력
+        int hp;                                        //생명력
+        int critical;                                  //치명
+        int specialization;                            //특화
+        int swiftness;                                 //신속
+        int domination;                                //제압
+        int endurance;                                 //인내
+        int expertise;                                 //숙련
+        char level[MAX_NAME_LENGTH];                   //레벨
+        char gackin_name[8][MAX_NAME_LENGTH];          //각인정보
+        int gackin_count = 0;                          //각인 갯수
+        int servercount = 0;                           //서버 갯수
+        int errorcode = 0;			       //에러 flag
+	....
+	```
+	
+4. 직업 및 직업 각인 별 랭커 명단 -> job 디렉토리에 존재하는데 Gackin 추천 시에 해당 파일에서 랭커 명단을 읽은 뒤
+Ranker 폴더의 랭커 각인 정보를 불러온다. 이 때 랭커 명단은 관리가 필요하며, 랭커의 각인 정보는 `gackin_info_scriper.exe` 로
+읽어올 수 있다.
+
+	```C++
+	....
+	for (int i = 0; i < 10; i++) {
+		char cp_path[256]="";
+		std::ifstream gg;
+		strcat_s(cp_path, ranker_path);
+		strcat_s(cp_path, user[i]);
+		strcat_s(cp_path, ".txt");
+
+		gg.open(cp_path);
+		if (gg.fail()) {
+		    std::cerr << "파일을 찾을 수 없음 error" << std::endl;
+		    continue;
+		}
+		int count = 0;
+		while (!gg.eof()||count<8) {
+
+		    gg.getline(gackin_name[i][count],30);
+
+		    count++;
+		}
+
+
+    	}
+	....
+	```
+#### 기여자 `광운대학교 이준희`
+## GUI 구현 `Windows form C++`
+#### GUI 구현을 위해 `Windows form C++`를 사용하였습니다. 미리 .cxx .h 를 통해 구현을 마무리하여 사용만 하였기에 빠르게 구현 가능하였습니다.
+### GUI 기본 코드
+1. 도구상자에서 button을 끌어다가 form에 추가하고 그 button을 더블 클릭하면 button을 클릭하면 실행될 코드를 작성할 수 있습니다.
+
+	```c++
+	//ex) 각인추천 기능 button 클릭시
+	private: System::Void gackin_Click(System::Object^ sender, System::EventArgs^ e) 	{
+		// 실행 할 코드
+		GackinForm^ gackinform = gcnew GackinForm();
+		this->Hide();
+		gackinform->ShowDialog();
+		this->Show();
+	}
+	```
+
+2. form간 이동
+	- 이동을 시작할 form에서 이동할 form이 만들어져 있는 헤더를 선언
+	
+
+	```c++
+	#include "SimulForm.h"
+	```
+
+	- 이동 코드
+
+	```c++
+	// 실행시 SimulForm 실행 -> SimulForm 닫을 시 다시 이전 form 실행
+	SimulForm^ simulform = gcnew SimulForm();
+	this->Hide();
+	simulform->ShowDialog();
+	this->Show(); // this->Close()면 SimulForm을 종료 했을 때 프로그램 종료
+	```
+
+3. 다른 form으로 값 전달
+	- 값을 보내는 form에서
+
+	```c++
+	//ex) ChooseForm을 생성하면서 값을 전달
+	ChooseForm^ chooseform = gcnew ChooseForm(this->Nickname->Text);
+	```
+
+	- 값을 받는 form의 constructor의 바로 아래부분에
+
+	```c++
+	ChooseForm(String^ data) { // data : 받은 값
+		InitializeComponent();
+		Nickname->Text = data; // Nickname의 Text를 data로 변경
+	}
+	```
+##형변환
+계산할 값을 form에서 입력하면, 그 문자의 타입은 String이 아닌 String^입니다.
+aution class 내부의 함수를 실행시켜 계산 값을 얻기 위해서는 입력한 String^ 타입의 문자열을 정수형으로 변환한 뒤 aution class로 전달할 필요가 있었습니다.
+
+1. String^ -> String 형변환
+
+	```c++
+	// String^ -> String 형변환 함수
+	void MarshalString(String^ s, std::string& os) {
+		using namespace Runtime::InteropServices;
+		const char* chars =
+			(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
+		os = chars;
+		Marshal::FreeHGlobal(IntPtr((void*)chars));
+	}
+	
+	// String^ -> String
+	std::string change = "";
+	aution->MarshalString(this->textBox1->Text, change); // String^ -> String
+	```
+
+2. String -> double 형변환
+
+	```c++
+	// aution class의 price에 값 전달
+	this->aution->price = stod(change);
+	```
+
+3. int -> String 형변환
+
+	```c++
+	std::stringstream ssInt1; // Int -> String 하기 위한
+	ssInt1 << aution->equal_price; // int 값을 넣고
+	ssInt1.str() // int -> String
+	```
+
+4. String -> String^ 형변환
+
+	```c++
+	String^ str1 = gcnew String(ssInt1.str().data()); // String -> String^
+	```
+
+#### 내부 폼 양식은 `LostArk_M` 디렉토리의 `xxxForm.h` 입니다.
+
+#### 코멘트
+조원들이 공통적으로 할 수 있는 언어가 c++였기 때문에 c++로 GUI를 만들 수 있는 개발 툴 중 하나인 `Windows form`을 사용했습니다.
+`Windows form`이 대부분 c# 언어로 사용하기 때문에 c++ 버전의 자료를 찾는데 시간을 많이 소비했습니다. 결과적으로는 다 해결할 수 있었습니다.
+기본적인 GUI 컨셉으로 광운대를 대표하는 붉은색 계열의 색을 사용했습니다.
+
+
+#### 기여자 `광운대학교 이준희`  `광운대학교 양경원`  `광운대학교 장시원`
+
