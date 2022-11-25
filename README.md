@@ -46,7 +46,7 @@
    * 자세한 구현 설명이 필요하신 분들은 구현 설명란에서 확인 가능합니다.
    
 # 사용 설명
-<p align="center"><img src="https://user-images.githubusercontent.com/56543424/203975007-6ad398cf-7c4e-4565-b0cd-b8ff1fc01503.png" width="100%" height="100%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/56543424/204001655-2deece01-95c6-4ecb-9ed0-6d19ff7cfdcc.png" width="100%" height="100%"></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/56543424/203975017-b94ddef1-787e-4870-9d53-eb09d0c40c77.png" width="100%" height="100%"></p>
 
 
