@@ -147,7 +147,7 @@ namespace LostArkM {
 			this->MaximumSize = System::Drawing::Size(600, 800);
 			this->MinimumSize = System::Drawing::Size(600, 800);
 			this->Name = L"ValtanPlayForm";
-			this->Text = L"ValtanPlayForm";
+			this->Load += gcnew System::EventHandler(this, &ValtanPlayForm::ValtanPlayForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
@@ -206,6 +206,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 			Console::WriteLine("problem", path);
 	}
 	this->label3->Text = valtan2;
+}
+private: System::Void ValtanPlayForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

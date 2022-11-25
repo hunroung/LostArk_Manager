@@ -141,7 +141,6 @@ namespace LostArkM {
 			this->MaximumSize = System::Drawing::Size(338, 564);
 			this->MinimumSize = System::Drawing::Size(338, 564);
 			this->Name = L"RaidPlayThroughForm";
-			this->Text = L"RaidPlayThroughForm";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);

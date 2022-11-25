@@ -161,7 +161,6 @@ namespace LostArkM {
 			this->MaximumSize = System::Drawing::Size(600, 800);
 			this->MinimumSize = System::Drawing::Size(600, 800);
 			this->Name = L"KoukuSatonPlayForm";
-			this->Text = L"KoukuSatonPlayForm";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
