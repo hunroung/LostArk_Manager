@@ -1,6 +1,6 @@
 # 개발 진척도
-![My project-1 (2)](https://user-images.githubusercontent.com/56543424/203941541-81c18c18-4022-4169-bcf5-90e41b085025.png)
 
+<center><img src="https://user-images.githubusercontent.com/56543424/203941541-81c18c18-4022-4169-bcf5-90e41b085025.png" width="50%" height="50%"></center>
 
 ## 각인 추천 기능
 1. `Gackin.h` : 각인 추천에 필요한 여러 함수, 클래스들 선언 ( 사실상 대부분의 기능에서 활용될 메인 라이브러리 )
