@@ -77,6 +77,18 @@
     <ClInclude Include="SimulForm.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="RaidPlayThroughForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KoukuSatonPlayForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ValtanPlayForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BiackissPlayForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Card_le_advancedForm.resx">
@@ -101,6 +113,18 @@
       <Filter>헤더 파일</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="RockForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaidPlayThroughForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BiackissPlayForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KoukuSatonPlayForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValtanPlayForm.resx">
       <Filter>리소스 파일</Filter>
     </EmbeddedResource>
   </ItemGroup>

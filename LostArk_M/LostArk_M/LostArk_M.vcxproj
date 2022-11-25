@@ -133,6 +133,9 @@
     <ClInclude Include="AbyssForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="BiackissPlayForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="CardSimulHeader.h">
       <FileType>CppHeader</FileType>
     </ClInclude>
@@ -155,6 +158,9 @@
     <ClInclude Include="GackinForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="KoukuSatonPlayForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="LegendForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -171,6 +177,9 @@
     <ClInclude Include="RaidForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RaidPlayThroughForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RockForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -178,9 +187,13 @@
     <ClInclude Include="SimulForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ValtanPlayForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AbyssForm.resx" />
+    <EmbeddedResource Include="BiackissPlayForm.resx" />
     <EmbeddedResource Include="Card_le_advancedForm.resx" />
     <EmbeddedResource Include="Card_le_heroForm.resx" />
     <EmbeddedResource Include="Card_le_nomalForm.resx" />
@@ -191,6 +204,7 @@
     <EmbeddedResource Include="GackinForm.resx">
       <DependentUpon>GackinForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KoukuSatonPlayForm.resx" />
     <EmbeddedResource Include="LegendForm.resx" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
@@ -204,8 +218,10 @@
     <EmbeddedResource Include="RaidForm.resx">
       <DependentUpon>RaidForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RaidPlayThroughForm.resx" />
     <EmbeddedResource Include="RockForm.resx" />
     <EmbeddedResource Include="SimulForm.resx" />
+    <EmbeddedResource Include="ValtanPlayForm.resx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="$this.Icon.ico" />

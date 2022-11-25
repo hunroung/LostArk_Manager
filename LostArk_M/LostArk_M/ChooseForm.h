@@ -4,7 +4,7 @@
 #include "RaidCalForm.h"
 #include "ProfileForm.h"
 #include "SimulForm.h"
-
+#include "RaidPlayThroughForm.h"
 namespace LostArkM {
 
 	using namespace System;
@@ -238,7 +238,7 @@ private: System::Void gackin_Click(System::Object^ sender, System::EventArgs^ e)
 	this->Show();
 }
 private: System::Void raid_Click(System::Object^ sender, System::EventArgs^ e) { // 레이드 공략 버튼 클릭시
-	RaidForm^ raidform = gcnew RaidForm();
+	RaidPlayThroughForm^ raidform = gcnew RaidPlayThroughForm();
 	this->Hide();
 	raidform->ShowDialog();
 	this->Show();

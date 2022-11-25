@@ -1,17 +1,21 @@
   LostArkM.AbyssForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.BiackissPlayForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.Card_le_advancedForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.Card_le_heroForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.Card_le_nomalForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.Card_le_rareForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.ChooseForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.GackinForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.KoukuSatonPlayForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.LegendForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.MainForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.ProfileForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.RaidCalForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.RaidForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.RaidPlayThroughForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.RockForm.resources - Embedded, ContainedInManifestFile, 
   LostArkM.SimulForm.resources - Embedded, ContainedInManifestFile, 
+  LostArkM.ValtanPlayForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly LostArk_M, Version=0.0.*, Culture=고정 언어(고정 국가): 
 	hash=SHA1, flags=PublicKey
@@ -133,6 +137,18 @@ Class LostArkM.RockForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class LostArkM.SimulForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.ValtanPlayForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.BiackissPlayForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.KoukuSatonPlayForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class LostArkM.RaidPlayThroughForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class LostArkM.ChooseForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
