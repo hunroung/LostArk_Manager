@@ -96,7 +96,7 @@ namespace LostArkM {
 			this->rock->Name = L"rock";
 			this->rock->Size = System::Drawing::Size(234, 63);
 			this->rock->TabIndex = 0;
-			this->rock->Text = L"¾îºôÆ¼¸® ½ºÅæ ¼¼°ø";
+			this->rock->Text = L"¾îºô¸®Æ¼ ½ºÅæ ¼¼°ø";
 			this->rock->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->rock->UseVisualStyleBackColor = false;
 			this->rock->Click += gcnew System::EventHandler(this, &SimulForm::rock_Click);
