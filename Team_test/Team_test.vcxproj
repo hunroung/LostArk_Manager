@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Gackin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Gackin.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,64 +133,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\team\LostArk_Manager\0_basic_information\Gackin.cpp" />
-    <ClCompile Include="..\..\team\LostArk_Manager\0_basic_information\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\team\LostArk_Manager\0_basic_information\character_info_scriper.exe" />
-    <None Include="..\..\team\LostArk_Manager\0_basic_information\character_info_scriper.py" />
-    <None Include="..\..\team\LostArk_Manager\0_basic_information\gackin_info_scriper.exe" />
-    <None Include="..\..\team\LostArk_Manager\0_basic_information\gackin_info_scriper.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\team\LostArk_Manager\0_basic_information\Gackin.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\갈증.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\강화 무기.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\고독한 기사.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\광기.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\광전사의 비기.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\극의.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\넘치는 교감.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\달의 소리.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\만개.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\멈출 수 없는 충동.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\버스트.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\분노의 망치.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\사냥의 시간.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\상급 소환사.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\세멕타통.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\아르데타인의 기술.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\역천지체.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\오의 강화.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\오의난무.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\완벽한 억제.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\이슬비.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\일격필살.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\잔재된 기운.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\전투 태세.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\절실한 구원.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\절정.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\절제.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\점화.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\중력 수련.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\진화의 유산.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\질풍노도.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\초심.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\축복의 오라.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\충격 단련.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\포격 강화.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\피스메이커.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\핸드거너.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\호크아이.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\화력 강화.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\환류.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\황제의 칙령.txt" />
-    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\황후의 은총.txt" />
-    <Text Include="character_info_포근한코코아.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

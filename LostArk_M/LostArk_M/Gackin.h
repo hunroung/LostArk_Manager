@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <process.h>
-using namespace System;
+
 
 // LostArk character class
 
@@ -62,9 +62,9 @@ using namespace System;
     public:
         Gackin_info(char* job_gackin);
         static const int MAX_NAME_LENGTH = 30; //각인 최대 개수
-        int gackin_count = 0;                  //각인 개수
-        int gackin_level;                      //각인 레벨 (최대 15)
-        char gackin_name[8][MAX_NAME_LENGTH];  //각인 이름
+        char* p_gackin(int user, int gack) { return gackin_name[user][gack]; }
+    private:
+        char gackin_name[10][8][MAX_NAME_LENGTH];  //각인 이름
     };
 
 
