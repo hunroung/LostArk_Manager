@@ -206,7 +206,10 @@
   <ItemGroup>
     <Image Include="$this.Icon.ico" />
     <Image Include="..\icon.ico" />
+    <Image Include="56a3599ac91e4c329a669b277eedaa3a_1641212670.png" />
+    <Image Include="e67815b5d28f423fb54106ce472b4575.jpg" />
     <Image Include="icon.ico" />
+    <Image Include="Image1.bmp" />
     <Image Include="mainicon.ico" />
     <Image Include="mainIcon.png" />
   </ItemGroup>

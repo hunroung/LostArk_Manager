@@ -268,6 +268,8 @@ namespace LostArkM {
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(400, 500);
+			this->MinimumSize = System::Drawing::Size(400, 500);
 			this->Name = L"Card_le_heroForm";
 			this->Load += gcnew System::EventHandler(this, &Card_le_heroForm::Card_le_heroForm_Load);
 			this->panel1->ResumeLayout(false);

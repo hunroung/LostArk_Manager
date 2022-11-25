@@ -173,3 +173,29 @@ Gackin_info::Gackin_info(char* job_gackin) {
     }
    
 }
+
+int Gackin_info::check_p(int i,int j) {
+    char ch[] = "";
+    if (i >= 10) {
+        return j;
+    }
+    if (strcmp(gackin_name[i][0], ch) != 0) {
+        return i;
+    }
+    else if (strcmp(gackin_name[i][0],ch)==0) {
+        return check_p(i + 1,j);
+    }
+}
+
+int Gackin_info::check_s(int i,int j) {
+    char ch[] = "";
+    if (i < 0) {
+        return j;
+    }
+    if (strcmp(gackin_name[i][0], ch) != 0) {
+        return i;
+    }
+    else if (strcmp(gackin_name[i][0], ch) == 0) {
+        return check_p(i - 1, j);
+    }
+}

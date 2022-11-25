@@ -594,6 +594,8 @@ namespace LostArkM {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(650, 300);
+			this->MinimumSize = System::Drawing::Size(650, 300);
 			this->Name = L"RockForm";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();

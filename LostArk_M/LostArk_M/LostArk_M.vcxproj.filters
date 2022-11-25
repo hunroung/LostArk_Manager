@@ -120,5 +120,14 @@
     <Image Include="..\icon.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="Image1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="56a3599ac91e4c329a669b277eedaa3a_1641212670.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="e67815b5d28f423fb54106ce472b4575.jpg">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

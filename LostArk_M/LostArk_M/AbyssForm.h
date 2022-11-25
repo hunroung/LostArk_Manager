@@ -762,6 +762,8 @@ namespace LostArkM {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(475, 600);
+			this->MinimumSize = System::Drawing::Size(475, 600);
 			this->Name = L"AbyssForm";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();

@@ -1,3 +1,4 @@
+#pragma once
 #include <stdio.h>
 #include <fstream>
 #include <iostream>
@@ -63,6 +64,8 @@
         Gackin_info(char* job_gackin);
         static const int MAX_NAME_LENGTH = 30; //각인 최대 개수
         char* p_gackin(int user, int gack) { return gackin_name[user][gack]; }
+        int check_p(int i,int j);
+        int check_s(int i,int j);
     private:
         char gackin_name[10][8][MAX_NAME_LENGTH];  //각인 이름
     };

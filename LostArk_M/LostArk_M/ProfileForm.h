@@ -155,15 +155,15 @@ namespace LostArkM {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel4->SuspendLayout();
-			this->panel5->SuspendLayout();
 			this->panel6->SuspendLayout();
+			this->panel5->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -577,6 +577,7 @@ namespace LostArkM {
 			this->보유캐릭터->Name = L"보유캐릭터";
 			this->보유캐릭터->Size = System::Drawing::Size(103, 64);
 			this->보유캐릭터->TabIndex = 42;
+			this->보유캐릭터->SelectedIndexChanged += gcnew System::EventHandler(this, &ProfileForm::보유캐릭터_SelectedIndexChanged);
 			// 
 			// label8
 			// 
@@ -661,30 +662,6 @@ namespace LostArkM {
 			this->panel4->Size = System::Drawing::Size(558, 128);
 			this->panel4->TabIndex = 11;
 			// 
-			// panel5
-			// 
-			this->panel5->BackColor = System::Drawing::Color::Maroon;
-			this->panel5->Controls->Add(this->label10);
-			this->panel5->Location = System::Drawing::Point(12, 228);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(98, 25);
-			this->panel5->TabIndex = 15;
-			// 
-			// label10
-			// 
-			this->label10->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->label10->AutoSize = true;
-			this->label10->BackColor = System::Drawing::Color::Maroon;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label10->ForeColor = System::Drawing::Color::White;
-			this->label10->Location = System::Drawing::Point(31, 0);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(44, 25);
-			this->label10->TabIndex = 14;
-			this->label10->Text = L"각인";
-			// 
 			// panel6
 			// 
 			this->panel6->BackColor = System::Drawing::Color::Maroon;
@@ -708,6 +685,30 @@ namespace LostArkM {
 			this->label5->Size = System::Drawing::Size(44, 25);
 			this->label5->TabIndex = 14;
 			this->label5->Text = L"특성";
+			// 
+			// panel5
+			// 
+			this->panel5->BackColor = System::Drawing::Color::Maroon;
+			this->panel5->Controls->Add(this->label10);
+			this->panel5->Location = System::Drawing::Point(12, 228);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(98, 25);
+			this->panel5->TabIndex = 15;
+			// 
+			// label10
+			// 
+			this->label10->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label10->AutoSize = true;
+			this->label10->BackColor = System::Drawing::Color::Maroon;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label10->ForeColor = System::Drawing::Color::White;
+			this->label10->Location = System::Drawing::Point(31, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(44, 25);
+			this->label10->TabIndex = 14;
+			this->label10->Text = L"각인";
 			// 
 			// ProfileForm
 			// 
@@ -762,10 +763,10 @@ namespace LostArkM {
 			this->panel2->PerformLayout();
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
-			this->panel5->ResumeLayout(false);
-			this->panel5->PerformLayout();
 			this->panel6->ResumeLayout(false);
 			this->panel6->PerformLayout();
+			this->panel5->ResumeLayout(false);
+			this->panel5->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -863,11 +864,11 @@ namespace LostArkM {
 	this->ch_exp->Text = str17;
 
 	int i = 0;
-	listBox1->Items->Clear();
+	보유캐릭터->Items->Clear();
 	while (i < main_char.p_total_count()) {
 		String^ arr = gcnew String(main_char.p_all_name(i)); // String -> String^
 		
-		listBox1->Items->Add(arr);
+		보유캐릭터->Items->Add(arr);
 		i++;
 	}
 	String^ str18 = gcnew String(main_char.p_job()); // String -> String^
@@ -887,6 +888,8 @@ private: System::Void label13_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void label14_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label1_Click_3(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void 보유캐릭터_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

@@ -333,6 +333,8 @@ namespace LostArkM {
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximumSize = System::Drawing::Size(400, 500);
+			this->MinimumSize = System::Drawing::Size(400, 500);
 			this->Name = L"Card_le_advancedForm";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
