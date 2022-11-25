@@ -112,7 +112,7 @@ namespace LostArkM {
 			this->legend->Name = L"legend";
 			this->legend->Size = System::Drawing::Size(234, 63);
 			this->legend->TabIndex = 1;
-			this->legend->Text = L"Àü¼³ Ä«µå ÆÑ II";
+			this->legend->Text = L"Àü¼³ Ä«µå ÆÑ  ";
 			this->legend->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->legend->UseVisualStyleBackColor = true;
 			this->legend->Click += gcnew System::EventHandler(this, &SimulForm::legend_Click);

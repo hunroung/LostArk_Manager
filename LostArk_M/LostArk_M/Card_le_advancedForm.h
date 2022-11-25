@@ -345,6 +345,7 @@ namespace LostArkM {
 		advanced_simul->legend_advanced();
 		advanced_simul->count++;
 		this->label4->Text = advanced_simul->result;
+		this->label8->Text = "";
 		this->label6->Text = advanced_simul->legend_count + " Àå";
 		this->label7->Text = advanced_simul->hero_count + " Àå";
 		this->label11->Text = advanced_simul->rare_count + " Àå";

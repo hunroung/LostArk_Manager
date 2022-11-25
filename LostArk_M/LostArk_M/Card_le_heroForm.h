@@ -283,6 +283,7 @@ namespace LostArkM {
 		simul->legend_hero();
 		simul->count++;
 		this->label4->Text = simul->result;
+		this->label8->Text = "";
 		this->label6->Text = simul->legend_count + " ภๅ";
 		this->label7->Text = simul->hero_count + " ภๅ";
 		this->label9->Text = "รั "+simul->count + " ภๅ";

@@ -184,6 +184,7 @@ namespace LostArkM {
 			this->label1->Size = System::Drawing::Size(189, 31);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"레이드경매 계산기";
+			this->label1->Click += gcnew System::EventHandler(this, &RaidCalForm::label1_Click);
 			// 
 			// button1
 			// 
@@ -294,9 +295,9 @@ namespace LostArkM {
 			this->six->ForeColor = System::Drawing::Color::White;
 			this->six->Location = System::Drawing::Point(513, 514);
 			this->six->Name = L"six";
-			this->six->Size = System::Drawing::Size(28, 18);
+			this->six->Size = System::Drawing::Size(20, 18);
 			this->six->TabIndex = 36;
-			this->six->Text = L"0G";
+			this->six->Text = L"G";
 			// 
 			// fore
 			// 
@@ -307,9 +308,9 @@ namespace LostArkM {
 			this->fore->ForeColor = System::Drawing::Color::White;
 			this->fore->Location = System::Drawing::Point(513, 463);
 			this->fore->Name = L"fore";
-			this->fore->Size = System::Drawing::Size(28, 18);
+			this->fore->Size = System::Drawing::Size(20, 18);
 			this->fore->TabIndex = 35;
-			this->fore->Text = L"0G";
+			this->fore->Text = L"G";
 			// 
 			// two
 			// 
@@ -320,9 +321,10 @@ namespace LostArkM {
 			this->two->ForeColor = System::Drawing::Color::White;
 			this->two->Location = System::Drawing::Point(513, 407);
 			this->two->Name = L"two";
-			this->two->Size = System::Drawing::Size(28, 18);
+			this->two->Size = System::Drawing::Size(20, 18);
 			this->two->TabIndex = 34;
-			this->two->Text = L"0G";
+			this->two->Text = L"G";
+			this->two->Click += gcnew System::EventHandler(this, &RaidCalForm::two_Click);
 			// 
 			// five
 			// 
@@ -333,9 +335,9 @@ namespace LostArkM {
 			this->five->ForeColor = System::Drawing::Color::White;
 			this->five->Location = System::Drawing::Point(149, 514);
 			this->five->Name = L"five";
-			this->five->Size = System::Drawing::Size(28, 18);
+			this->five->Size = System::Drawing::Size(20, 18);
 			this->five->TabIndex = 33;
-			this->five->Text = L"0G";
+			this->five->Text = L"G";
 			// 
 			// three
 			// 
@@ -346,9 +348,9 @@ namespace LostArkM {
 			this->three->ForeColor = System::Drawing::Color::White;
 			this->three->Location = System::Drawing::Point(149, 463);
 			this->three->Name = L"three";
-			this->three->Size = System::Drawing::Size(28, 18);
+			this->three->Size = System::Drawing::Size(20, 18);
 			this->three->TabIndex = 32;
-			this->three->Text = L"0G";
+			this->three->Text = L"G";
 			// 
 			// one
 			// 
@@ -359,9 +361,9 @@ namespace LostArkM {
 			this->one->ForeColor = System::Drawing::Color::White;
 			this->one->Location = System::Drawing::Point(149, 407);
 			this->one->Name = L"one";
-			this->one->Size = System::Drawing::Size(28, 18);
+			this->one->Size = System::Drawing::Size(20, 18);
 			this->one->TabIndex = 31;
-			this->one->Text = L"0G";
+			this->one->Text = L"G";
 			// 
 			// label10
 			// 
@@ -489,7 +491,6 @@ namespace LostArkM {
 			this->MaximumSize = System::Drawing::Size(700, 600);
 			this->MinimumSize = System::Drawing::Size(700, 600);
 			this->Name = L"RaidCalForm";
-			this->Load += gcnew System::EventHandler(this, &RaidCalForm::RaidCalForm_Load);
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
@@ -531,34 +532,36 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	std::stringstream ssInt1; // Int -> String 하기 위한
 	ssInt1 << aution->equal_price; // Int 값을 넣는
 	String^ str1 = gcnew String(ssInt1.str().data()); // String -> String^
-	this->one->Text = str1;
+	this->one->Text = str1+"G";
 
 	std::stringstream ssInt2;
 	ssInt2 << aution->equal_distribution;
 	String^ str2 = gcnew String(ssInt2.str().data());
-	this->two->Text = str2;
+	this->two->Text = str2+"G";
 
 	std::stringstream ssInt3;
 	ssInt3 << aution->benefit_price;
 	String^ str3 = gcnew String(ssInt3.str().data());
-	this->three->Text = str3;
+	this->three->Text = str3+"G";
 
 	std::stringstream ssInt4; 
 	ssInt4 << aution->benefit; 
 	String^ str4 = gcnew String(ssInt4.str().data()); 
-	this->fore->Text = str4;
+	this->fore->Text = str4 + "G";
 
 	std::stringstream ssInt5;
 	ssInt5 << aution->max_price;
 	String^ str5 = gcnew String(ssInt5.str().data()); 
-	this->five->Text = str5;
+	this->five->Text = str5+"G";
 
 	std::stringstream ssInt6;
 	ssInt6 << aution->min_benefit;
 	String^ str6 = gcnew String(ssInt6.str().data()); 
-	this->six->Text = str6;
+	this->six->Text = str6+"G";
 }
-private: System::Void RaidCalForm_Load(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void two_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

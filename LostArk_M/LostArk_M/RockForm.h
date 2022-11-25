@@ -78,6 +78,9 @@ namespace LostArkM {
 	private: System::Windows::Forms::Panel^ panel30;
 	private: System::Windows::Forms::Panel^ panel31;
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
 
 	private:
 		/// <summary>
@@ -93,6 +96,7 @@ namespace LostArkM {
 		void InitializeComponent(void)
 		{
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -132,7 +136,9 @@ namespace LostArkM {
 			this->panel29 = (gcnew System::Windows::Forms::Panel());
 			this->panel30 = (gcnew System::Windows::Forms::Panel());
 			this->panel31 = (gcnew System::Windows::Forms::Panel());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -143,8 +149,20 @@ namespace LostArkM {
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(600, 50);
+			this->panel1->Size = System::Drawing::Size(645, 50);
 			this->panel1->TabIndex = 0;
+			// 
+			// button4
+			// 
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->button4->Location = System::Drawing::Point(559, 7);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(66, 32);
+			this->button4->TabIndex = 5;
+			this->button4->Text = L"reset";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &RockForm::button4_Click);
 			// 
 			// label1
 			// 
@@ -198,7 +216,7 @@ namespace LostArkM {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
-			this->button1->Location = System::Drawing::Point(501, 85);
+			this->button1->Location = System::Drawing::Point(550, 85);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(66, 32);
 			this->button1->TabIndex = 4;
@@ -210,7 +228,7 @@ namespace LostArkM {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
-			this->button2->Location = System::Drawing::Point(501, 140);
+			this->button2->Location = System::Drawing::Point(550, 140);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(66, 32);
 			this->button2->TabIndex = 5;
@@ -222,7 +240,7 @@ namespace LostArkM {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
-			this->button3->Location = System::Drawing::Point(501, 195);
+			this->button3->Location = System::Drawing::Point(550, 195);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(66, 32);
 			this->button3->TabIndex = 6;
@@ -492,22 +510,49 @@ namespace LostArkM {
 			this->panel31->Size = System::Drawing::Size(30, 30);
 			this->panel31->TabIndex = 28;
 			// 
-			// button4
+			// label7
 			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"±¼¸²", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
-			this->button4->Location = System::Drawing::Point(501, 9);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(66, 32);
-			this->button4->TabIndex = 5;
-			this->button4->Text = L"reset";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &RockForm::button4_Click);
+			this->label7->ForeColor = System::Drawing::SystemColors::Highlight;
+			this->label7->Location = System::Drawing::Point(510, 85);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(28, 27);
+			this->label7->TabIndex = 38;
+			this->label7->Text = L"0";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"±¼¸²", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->label8->ForeColor = System::Drawing::SystemColors::Highlight;
+			this->label8->Location = System::Drawing::Point(510, 140);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(28, 27);
+			this->label8->TabIndex = 39;
+			this->label8->Text = L"0";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"±¼¸²", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->label9->ForeColor = System::Drawing::Color::Red;
+			this->label9->Location = System::Drawing::Point(510, 195);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(28, 27);
+			this->label9->TabIndex = 40;
+			this->label9->Text = L"0";
 			// 
 			// RockForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
-			this->ClientSize = System::Drawing::Size(584, 261);
+			this->ClientSize = System::Drawing::Size(634, 261);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->panel22);
 			this->Controls->Add(this->panel23);
 			this->Controls->Add(this->panel24);
@@ -595,11 +640,13 @@ namespace LostArkM {
 			}
 			if (n == 1) {
 				abil1->BackColor = System::Drawing::ColorTranslator::FromHtml("#00dddd");
+				rock->abil1_success_count++;
 			}
 			else {
 				abil1->BackColor = System::Drawing::ColorTranslator::FromHtml("#555555");
 			}
 			rock->abil1_count++;
+			this->label7->Text = rock->abil1_success_count+"";
 			this->label6->Text = rock->p + " %";
 		}
 	}
@@ -642,12 +689,14 @@ namespace LostArkM {
 			}
 			if (n == 1) {
 				abil2->BackColor = System::Drawing::ColorTranslator::FromHtml("#00dddd");
+				rock->abil2_success_count++;
 			}
 			else {
 				abil2->BackColor = System::Drawing::ColorTranslator::FromHtml("#555555");
 			}
 			rock->abil2_count++;
 			this->label6->Text = rock->p + " %";
+			this->label8->Text = rock->abil2_success_count + "";
 		}
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -689,12 +738,14 @@ namespace LostArkM {
 			}
 			if (n == 1) {
 				abil3->BackColor = System::Drawing::ColorTranslator::FromHtml("#990000");
+				rock->abil3_success_count++;
 			}
 			else {
 				abil3->BackColor = System::Drawing::ColorTranslator::FromHtml("#555555");
 			}
 			rock->abil3_count++;
 			this->label6->Text = rock->p + " %";
+			this->label9->Text = rock->abil3_success_count+"";
 		}
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -702,6 +753,9 @@ namespace LostArkM {
 		rock->abil1_count = 0;
 		rock->abil2_count = 0;
 		rock->abil3_count = 0;
+		rock->abil1_success_count = 0;
+		rock->abil2_success_count = 0;
+		rock->abil3_success_count = 0;
 		Panel^ abil;
 		panel2->BackColor = System::Drawing::Color::LightGray;
 		panel3->BackColor = System::Drawing::Color::LightGray;
@@ -734,6 +788,9 @@ namespace LostArkM {
 		panel30->BackColor = System::Drawing::Color::LightGray;
 		panel31->BackColor = System::Drawing::Color::LightGray;
 		this->label6->Text = rock->p + " %";
+		this->label7->Text = rock->abil1_success_count + "";
+		this->label8->Text = rock->abil2_success_count + "";
+		this->label9->Text = rock->abil3_success_count + "";
 	}
 };
 }

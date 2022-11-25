@@ -303,6 +303,7 @@ namespace LostArkM {
 		rare_simul->legend_rare();
 		rare_simul->count++;
 		this->label4->Text = rare_simul->result;
+		this->label8->Text = "";
 		this->label6->Text = rare_simul->legend_count + " Àå";
 		this->label7->Text = rare_simul->hero_count + " Àå";
 		this->label11->Text = rare_simul->rare_count + " Àå";

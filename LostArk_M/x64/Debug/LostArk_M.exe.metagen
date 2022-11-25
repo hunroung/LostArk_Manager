@@ -123,6 +123,9 @@ Class Rock.Rocksimulator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Int32 abil1_count : Public
     Int32 abil2_count : Public
     Int32 abil3_count : Public
+    Int32 abil1_success_count : Public
+    Int32 abil2_success_count : Public
+    Int32 abil3_success_count : Public
     Int32 p : Public
   Methods:
     rock_simul(): PrivateScope, Public, HideBySig
