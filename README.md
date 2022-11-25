@@ -266,4 +266,33 @@
 	....
 	```
 	
-	
+4. 직업 및 직업 각인 별 랭커 명단 -> job 디렉토리에 존재하는데 Gackin 추천 시에 해당 파일에서 랭커 명단을 읽은 뒤
+Ranker 폴더의 랭커 각인 정보를 불러온다. 이 때 랭커 명단은 관리가 필요하며, 랭커의 각인 정보는 `gackin_info_scriper.exe` 로
+읽어올 수 있다.
+
+	```C++
+	....
+	for (int i = 0; i < 10; i++) {
+		char cp_path[256]="";
+		std::ifstream gg;
+		strcat_s(cp_path, ranker_path);
+		strcat_s(cp_path, user[i]);
+		strcat_s(cp_path, ".txt");
+
+		gg.open(cp_path);
+		if (gg.fail()) {
+		    std::cerr << "파일을 찾을 수 없음 error" << std::endl;
+		    continue;
+		}
+		int count = 0;
+		while (!gg.eof()||count<8) {
+
+		    gg.getline(gackin_name[i][count],30);
+
+		    count++;
+		}
+
+
+    	}
+	....
+	```
