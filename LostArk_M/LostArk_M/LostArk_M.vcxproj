@@ -203,6 +203,9 @@
     <EmbeddedResource Include="RockForm.resx" />
     <EmbeddedResource Include="SimulForm.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.bmp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
