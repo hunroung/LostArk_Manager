@@ -37,4 +37,22 @@
 
 2. `LOSTARK_MANAGER`
    * 완성된 로스트아크 매니저를 32bit, 64bit 버전의 exe로 배포하였습니다.
+   
+3. `LostArk_M`
+   * 기능 구현 파일, 헤더파일, 수집한 데이터 등을 windows form을 통해 출력하였습니다.
+   * Lostark_manager 프로그램의 소스코드입니다.
+   * `0_basic_information` 디렉토리는 저희가 사용한 기능들을 따로 활용하고자 하는 분들을 위해 모아둔 파일입니다. 소스코드가 궁금하신
+분들은 `LostArk_M` 파일의 소스코드를 확인해 주시기 바랍니다.
+   * 자세한 구현 설명이 필요하신 분들은 [이곳](#-구현-설명)을 통해 이동 가능합니다.
+   
+# 사용 설명
+<p align="center"><img src="https://user-images.githubusercontent.com/56543424/203975007-6ad398cf-7c4e-4565-b0cd-b8ff1fc01503.png" width="100%" height="100%"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/56543424/203975017-b94ddef1-787e-4870-9d53-eb09d0c40c77.png" width="100%" height="100%"></p>
+
+
+
+
+
+
+
 # 구현 설명
