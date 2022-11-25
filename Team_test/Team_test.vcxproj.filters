@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\team\LostArk_Manager\0_basic_information\main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\team\LostArk_Manager\0_basic_information\Gackin.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\team\LostArk_Manager\0_basic_information\character_info_scriper.py">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="..\..\team\LostArk_Manager\0_basic_information\character_info_scriper.exe">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="..\..\team\LostArk_Manager\0_basic_information\gackin_info_scriper.py">
+      <Filter>소스 파일</Filter>
+    </None>
+    <None Include="..\..\team\LostArk_Manager\0_basic_information\gackin_info_scriper.exe">
+      <Filter>소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\team\LostArk_Manager\0_basic_information\Gackin.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="character_info_포근한코코아.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\갈증.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\강화 무기.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\고독한 기사.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\광기.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\광전사의 비기.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\극의.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\넘치는 교감.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\달의 소리.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\만개.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\멈출 수 없는 충동.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\버스트.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\분노의 망치.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\사냥의 시간.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\상급 소환사.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\세멕타통.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\아르데타인의 기술.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\역천지체.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\오의 강화.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\오의난무.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\완벽한 억제.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\이슬비.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\일격필살.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\잔재된 기운.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\전투 태세.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\절실한 구원.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\절정.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\절제.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\점화.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\중력 수련.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\진화의 유산.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\질풍노도.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\초심.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\축복의 오라.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\충격 단련.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\포격 강화.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\피스메이커.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\핸드거너.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\호크아이.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\화력 강화.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\환류.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\황제의 칙령.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+    <Text Include="..\..\team\LostArk_Manager\0_basic_information\job\황후의 은총.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

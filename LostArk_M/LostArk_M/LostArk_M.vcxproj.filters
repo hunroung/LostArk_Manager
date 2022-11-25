@@ -18,7 +18,7 @@
     <ClCompile Include="MainForm.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CardSimulForm1.cpp">
+    <ClCompile Include="Gackin.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,14 +41,84 @@
     <ClInclude Include="RaidCalHeader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SimulForm.h">
+    <ClInclude Include="ProfileForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Gackin.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RockForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RockHeader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AbyssForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Card_le_advancedForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Card_le_heroForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Card_le_nomalForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Card_le_rareForm.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CardSimulHeader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CardSimulForm1.h">
+    <ClInclude Include="LegendForm.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SimulForm.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Card_le_advancedForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Card_le_heroForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Card_le_nomalForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Card_le_rareForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LegendForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimulForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbyssForm.resx">
+      <Filter>헤더 파일</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RockForm.resx">
+      <Filter>리소스 파일</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="mainicon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="$this.Icon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="mainIcon.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\icon.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

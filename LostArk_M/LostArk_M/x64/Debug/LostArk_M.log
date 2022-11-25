@@ -7,6 +7,8 @@ C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\RaidCalHeader.h(75,45): warni
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\RaidCalHeader.h(77,27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\RaidCalForm.h(525,26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\RaidCalForm.h(528,34): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\ProfileForm.h(700,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\RockForm.h(760,10): warning C4101: 'abil' :참조되지 않은 지역 변수입니다.
 C:\Users\didru\LostArk_Manager\LostArk_M\LostArk_M\MainForm.cpp(8,33): warning C4829: main 함수에 대한 매개 변수가 잘못된 것 같습니다. 'int main(Platform::Array<Platform::String^>^ argv)'를 사용하십시오.
-  CardSimulForm1.obj : MSIL 모듈이 발견되었습니다. MSIL에 증분 링크를 사용할 수 없습니다. 전체 링크를 수행하고 있습니다.
+  Gackin.obj : MSIL 모듈이 발견되었습니다. MSIL에 증분 링크를 사용할 수 없습니다. 전체 링크를 수행하고 있습니다.
   LostArk_M.vcxproj -> C:\Users\didru\LostArk_Manager\LostArk_M\x64\Debug\LostArk_M.exe

@@ -122,21 +122,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CardSimulForm1.cpp" />
+    <ClCompile Include="Gackin.cpp" />
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CardSimulForm1.h">
+    <ClInclude Include="AbyssForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="CardSimulHeader.h" />
+    <ClInclude Include="CardSimulHeader.h">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="Card_le_advancedForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Card_le_heroForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Card_le_nomalForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Card_le_rareForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ChooseForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Gackin.h" />
     <ClInclude Include="GackinForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="LegendForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ProfileForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="RaidCalForm.h">
@@ -146,22 +167,32 @@
     <ClInclude Include="RaidForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RockForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RockHeader.h" />
     <ClInclude Include="SimulForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CardSimulForm1.resx">
-      <DependentUpon>CardSimulForm1.h</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="AbyssForm.resx" />
+    <EmbeddedResource Include="Card_le_advancedForm.resx" />
+    <EmbeddedResource Include="Card_le_heroForm.resx" />
+    <EmbeddedResource Include="Card_le_nomalForm.resx" />
+    <EmbeddedResource Include="Card_le_rareForm.resx" />
     <EmbeddedResource Include="ChooseForm.resx">
       <DependentUpon>ChooseForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GackinForm.resx">
       <DependentUpon>GackinForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LegendForm.resx" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileForm.resx">
+      <DependentUpon>ProfileForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RaidCalForm.resx">
       <DependentUpon>RaidCalForm.h</DependentUpon>
@@ -169,9 +200,15 @@
     <EmbeddedResource Include="RaidForm.resx">
       <DependentUpon>RaidForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SimulForm.resx">
-      <DependentUpon>SimulForm.h</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="RockForm.resx" />
+    <EmbeddedResource Include="SimulForm.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$this.Icon.ico" />
+    <Image Include="..\icon.ico" />
+    <Image Include="icon.ico" />
+    <Image Include="mainicon.ico" />
+    <Image Include="mainIcon.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,11 @@
 #pragma once
-#include "CardSimulForm1.h"
+#include "Card_le_heroForm.h"
+#include "Card_le_rareForm.h"
+#include "Card_le_advancedForm.h"
+#include "Card_le_nomalForm.h"
+#include "LegendForm.h"
+#include "AbyssForm.h"
+#include "RockForm.h"
 
 namespace LostArkM {
 
@@ -81,75 +87,122 @@ namespace LostArkM {
 			// 
 			// rock
 			// 
+			this->rock->BackColor = System::Drawing::Color::White;
+			this->rock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->rock->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"rock.Image")));
+			this->rock->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->rock->Location = System::Drawing::Point(25, 12);
 			this->rock->Name = L"rock";
 			this->rock->Size = System::Drawing::Size(234, 63);
 			this->rock->TabIndex = 0;
-			this->rock->Text = L"button1";
-			this->rock->UseVisualStyleBackColor = true;
+			this->rock->Text = L"¾îºôÆ¼¸® ½ºÅæ ¼¼°ø";
+			this->rock->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->rock->UseVisualStyleBackColor = false;
+			this->rock->Click += gcnew System::EventHandler(this, &SimulForm::rock_Click);
 			// 
 			// legend
 			// 
+			this->legend->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->legend->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->legend->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"legend.Image")));
+			this->legend->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->legend->Location = System::Drawing::Point(25, 98);
 			this->legend->Name = L"legend";
 			this->legend->Size = System::Drawing::Size(234, 63);
 			this->legend->TabIndex = 1;
-			this->legend->Text = L"button2";
+			this->legend->Text = L"Àü¼³ Ä«µå ÆÑ  ";
+			this->legend->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->legend->UseVisualStyleBackColor = true;
+			this->legend->Click += gcnew System::EventHandler(this, &SimulForm::legend_Click);
 			// 
 			// abyss
 			// 
+			this->abyss->BackColor = System::Drawing::Color::White;
+			this->abyss->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->abyss->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"abyss.Image")));
+			this->abyss->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->abyss->Location = System::Drawing::Point(25, 183);
 			this->abyss->Name = L"abyss";
 			this->abyss->Size = System::Drawing::Size(234, 63);
 			this->abyss->TabIndex = 2;
-			this->abyss->Text = L"button3";
-			this->abyss->UseVisualStyleBackColor = true;
+			this->abyss->Text = L"½É¿¬ÀÇ Àü¼³ Ä«µå ÆÑ";
+			this->abyss->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			this->abyss->UseVisualStyleBackColor = false;
+			this->abyss->Click += gcnew System::EventHandler(this, &SimulForm::abyss_Click);
 			// 
 			// le_hero
 			// 
+			this->le_hero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->le_hero->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"le_hero.Image")));
+			this->le_hero->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->le_hero->Location = System::Drawing::Point(25, 273);
 			this->le_hero->Name = L"le_hero";
 			this->le_hero->Size = System::Drawing::Size(234, 63);
 			this->le_hero->TabIndex = 3;
-			this->le_hero->Text = L"button4";
+			this->le_hero->Text = L"Àü¼³ - ¿µ¿õ Ä«µå ÆÑ";
+			this->le_hero->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->le_hero->UseVisualStyleBackColor = true;
 			this->le_hero->Click += gcnew System::EventHandler(this, &SimulForm::le_hero_Click);
 			// 
 			// le_rare
 			// 
+			this->le_rare->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->le_rare->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"le_rare.Image")));
+			this->le_rare->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->le_rare->Location = System::Drawing::Point(297, 12);
 			this->le_rare->Name = L"le_rare";
 			this->le_rare->Size = System::Drawing::Size(234, 63);
 			this->le_rare->TabIndex = 4;
-			this->le_rare->Text = L"button5";
+			this->le_rare->Text = L"Àü¼³ - Èñ±Í Ä«µå ÆÑ";
+			this->le_rare->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->le_rare->UseVisualStyleBackColor = true;
+			this->le_rare->Click += gcnew System::EventHandler(this, &SimulForm::le_rare_Click);
 			// 
 			// le_abvanced
 			// 
+			this->le_abvanced->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->le_abvanced->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"le_abvanced.Image")));
+			this->le_abvanced->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->le_abvanced->Location = System::Drawing::Point(297, 98);
 			this->le_abvanced->Name = L"le_abvanced";
 			this->le_abvanced->Size = System::Drawing::Size(234, 63);
 			this->le_abvanced->TabIndex = 5;
-			this->le_abvanced->Text = L"button6";
+			this->le_abvanced->Text = L"Àü¼³ - °í±Þ Ä«µå ÆÑ";
+			this->le_abvanced->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->le_abvanced->UseVisualStyleBackColor = true;
+			this->le_abvanced->Click += gcnew System::EventHandler(this, &SimulForm::le_abvanced_Click);
 			// 
 			// le_nomal
 			// 
+			this->le_nomal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->le_nomal->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"le_nomal.Image")));
+			this->le_nomal->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->le_nomal->Location = System::Drawing::Point(297, 183);
 			this->le_nomal->Name = L"le_nomal";
 			this->le_nomal->Size = System::Drawing::Size(234, 63);
 			this->le_nomal->TabIndex = 6;
-			this->le_nomal->Text = L"button7";
+			this->le_nomal->Text = L"ÀüÃ¼ Ä«µå ÆÑ    ";
+			this->le_nomal->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->le_nomal->UseVisualStyleBackColor = true;
+			this->le_nomal->Click += gcnew System::EventHandler(this, &SimulForm::le_nomal_Click);
 			// 
 			// jewel
 			// 
+			this->jewel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->jewel->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->jewel->Location = System::Drawing::Point(297, 273);
 			this->jewel->Name = L"jewel";
 			this->jewel->Size = System::Drawing::Size(234, 63);
 			this->jewel->TabIndex = 7;
-			this->jewel->Text = L"button8";
+			this->jewel->Text = L". . .";
 			this->jewel->UseVisualStyleBackColor = true;
 			// 
 			// SimulForm
@@ -169,15 +222,54 @@ namespace LostArkM {
 			this->MaximumSize = System::Drawing::Size(569, 400);
 			this->MinimumSize = System::Drawing::Size(569, 400);
 			this->Name = L"SimulForm";
+			this->Load += gcnew System::EventHandler(this, &SimulForm::SimulForm_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void le_hero_Click(System::Object^ sender, System::EventArgs^ e) {
-		CardSimulForm^ cardsimulform = gcnew CardSimulForm();
+private: System::Void le_hero_Click(System::Object^ sender, System::EventArgs^ e) {
+		Card_le_heroForm^ card_le_hero = gcnew Card_le_heroForm();
 		this->Hide();
-		cardsimulform->ShowDialog();
+		card_le_hero->ShowDialog();
 		this->Show();
-	}
+}
+private: System::Void SimulForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void le_rare_Click(System::Object^ sender, System::EventArgs^ e) {
+	Card_le_rareForm^ card_le_rare = gcnew Card_le_rareForm();
+	this->Hide();
+	card_le_rare->ShowDialog();
+	this->Show();
+}
+private: System::Void le_abvanced_Click(System::Object^ sender, System::EventArgs^ e) {
+	Card_le_advancedForm^ card_le_advanced = gcnew Card_le_advancedForm();
+	this->Hide();
+	card_le_advanced->ShowDialog();
+	this->Show();
+}
+private: System::Void le_nomal_Click(System::Object^ sender, System::EventArgs^ e) {
+	Card_le_nomalForm^ card_le_nomal = gcnew Card_le_nomalForm();
+	this->Hide();
+	card_le_nomal->ShowDialog();
+	this->Show();
+}
+private: System::Void legend_Click(System::Object^ sender, System::EventArgs^ e) {
+	LegendForm^ legend = gcnew LegendForm();
+	this->Hide();
+	legend->ShowDialog();
+	this->Show();
+}
+private: System::Void abyss_Click(System::Object^ sender, System::EventArgs^ e) {
+	AbyssForm^ abyss = gcnew AbyssForm();
+	this->Hide();
+	abyss->ShowDialog();
+	this->Show();
+}
+private: System::Void rock_Click(System::Object^ sender, System::EventArgs^ e) {
+	RockForm^ rock = gcnew RockForm();
+	this->Hide();
+	rock->ShowDialog();
+	this->Show();
+}
 };
 }

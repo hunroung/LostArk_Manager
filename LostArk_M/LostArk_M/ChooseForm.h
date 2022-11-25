@@ -2,6 +2,7 @@
 #include "GackinForm.h"
 #include "RaidForm.h"
 #include "RaidCalForm.h"
+#include "ProfileForm.h"
 #include "SimulForm.h"
 
 namespace LostArkM {
@@ -52,7 +53,8 @@ namespace LostArkM {
 	private: System::Windows::Forms::Button^ gackin;
 	private: System::Windows::Forms::Button^ raid;
 	private: System::Windows::Forms::Button^ cal;
-	private: System::Windows::Forms::Button^ si;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
 
 
 
@@ -85,7 +87,8 @@ namespace LostArkM {
 			this->gackin = (gcnew System::Windows::Forms::Button());
 			this->raid = (gcnew System::Windows::Forms::Button());
 			this->cal = (gcnew System::Windows::Forms::Button());
-			this->si = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -135,7 +138,7 @@ namespace LostArkM {
 			// 
 			this->gackin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gackin->Location = System::Drawing::Point(155, 62);
+			this->gackin->Location = System::Drawing::Point(32, 76);
 			this->gackin->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->gackin->Name = L"gackin";
 			this->gackin->Size = System::Drawing::Size(234, 60);
@@ -148,7 +151,7 @@ namespace LostArkM {
 			// 
 			this->raid->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->raid->Location = System::Drawing::Point(155, 165);
+			this->raid->Location = System::Drawing::Point(32, 170);
 			this->raid->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->raid->Name = L"raid";
 			this->raid->Size = System::Drawing::Size(234, 60);
@@ -161,7 +164,7 @@ namespace LostArkM {
 			// 
 			this->cal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->cal->Location = System::Drawing::Point(155, 264);
+			this->cal->Location = System::Drawing::Point(32, 267);
 			this->cal->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
 			this->cal->Name = L"cal";
 			this->cal->Size = System::Drawing::Size(234, 60);
@@ -170,33 +173,47 @@ namespace LostArkM {
 			this->cal->UseVisualStyleBackColor = true;
 			this->cal->Click += gcnew System::EventHandler(this, &ChooseForm::cal_Click);
 			// 
-			// si
+			// button1
 			// 
-			this->si->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->si->Location = System::Drawing::Point(155, 359);
-			this->si->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->si->Name = L"si";
-			this->si->Size = System::Drawing::Size(234, 60);
-			this->si->TabIndex = 5;
-			this->si->Text = L"시뮬레이터";
-			this->si->UseVisualStyleBackColor = true;
-			this->si->Click += gcnew System::EventHandler(this, &ChooseForm::si_Click);
+			this->button1->Location = System::Drawing::Point(293, 76);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(234, 60);
+			this->button1->TabIndex = 5;
+			this->button1->Text = L"각종 시뮬레이션";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &ChooseForm::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(293, 170);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(234, 60);
+			this->button2->TabIndex = 6;
+			this->button2->Text = L"유저 검색";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &ChooseForm::button2_Click);
 			// 
 			// ChooseForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(553, 461);
-			this->Controls->Add(this->si);
+			this->ClientSize = System::Drawing::Size(553, 387);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->cal);
 			this->Controls->Add(this->raid);
 			this->Controls->Add(this->gackin);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(3, 4, 3, 4);
-			this->MaximumSize = System::Drawing::Size(569, 500);
-			this->MinimumSize = System::Drawing::Size(569, 500);
+			this->MaximumSize = System::Drawing::Size(569, 426);
+			this->MinimumSize = System::Drawing::Size(569, 426);
 			this->Name = L"ChooseForm";
 			this->Load += gcnew System::EventHandler(this, &ChooseForm::ChooseForm_Load);
 			this->panel1->ResumeLayout(false);
@@ -215,6 +232,7 @@ private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Form
 }
 private: System::Void gackin_Click(System::Object^ sender, System::EventArgs^ e) { // 각인추천 기능 클릭시
 	GackinForm^ gackinform = gcnew GackinForm();
+	
 	this->Hide();
 	gackinform->ShowDialog();
 	this->Show();
@@ -225,16 +243,22 @@ private: System::Void raid_Click(System::Object^ sender, System::EventArgs^ e) {
 	raidform->ShowDialog();
 	this->Show();
 }
-private: System::Void cal_Click(System::Object^ sender, System::EventArgs^ e) { // 레이드 경매장 계산기 버튼 클릭시
+private: System::Void cal_Click(System::Object^ sender, System::EventArgs^ e) { // 레이드 경매장 계산기 벝튼 클릭시
 	RaidCalForm^ raidcalform = gcnew RaidCalForm();
 	this->Hide();
 	raidcalform->ShowDialog();
 	this->Show();
 }
-private: System::Void si_Click(System::Object^ sender, System::EventArgs^ e) { // 시뮬레이션 버튼 클릭시
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	SimulForm^ simulform = gcnew SimulForm();
 	this->Hide();
 	simulform->ShowDialog();
+	this->Show();
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	ProfileForm^ profileform = gcnew ProfileForm();
+	this->Hide();
+	profileform->ShowDialog();
 	this->Show();
 }
 };
