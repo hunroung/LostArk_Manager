@@ -296,3 +296,106 @@ Ranker 폴더의 랭커 각인 정보를 불러온다. 이 때 랭커 명단은 
     	}
 	....
 	```
+#### 기여자 `광운대학교 이준희`
+## GUI 구현 `Windows form C++`
+#### GUI 구현을 위해 `Windows form C++`를 사용하였습니다. 미리 .cxx .h 를 통해 구현을 마무리하여 사용만 하였기에 빠르게 구현 가능하였습니다.
+### GUI 기본 코드
+1. 도구상자에서 button을 끌어다가 form에 추가하고 그 button을 더블 클릭하면 button을 클릭하면 실행될 코드를 작성할 수 있습니다.
+
+	```c++
+	//ex) 각인추천 기능 button 클릭시
+	private: System::Void gackin_Click(System::Object^ sender, System::EventArgs^ e) 	{
+		// 실행 할 코드
+		GackinForm^ gackinform = gcnew GackinForm();
+		this->Hide();
+		gackinform->ShowDialog();
+		this->Show();
+	}
+	```
+
+2. form간 이동
+	- 이동을 시작할 form에서 이동할 form이 만들어져 있는 헤더를 선언
+	
+
+	```c++
+	#include "SimulForm.h"
+	```
+
+	- 이동 코드
+
+	```c++
+	// 실행시 SimulForm 실행 -> SimulForm 닫을 시 다시 이전 form 실행
+	SimulForm^ simulform = gcnew SimulForm();
+	this->Hide();
+	simulform->ShowDialog();
+	this->Show(); // this->Close()면 SimulForm을 종료 했을 때 프로그램 종료
+	```
+
+3. 다른 form으로 값 전달
+	- 값을 보내는 form에서
+
+	```c++
+	//ex) ChooseForm을 생성하면서 값을 전달
+	ChooseForm^ chooseform = gcnew ChooseForm(this->Nickname->Text);
+	```
+
+	- 값을 받는 form의 constructor의 바로 아래부분에
+
+	```c++
+	ChooseForm(String^ data) { // data : 받은 값
+		InitializeComponent();
+		Nickname->Text = data; // Nickname의 Text를 data로 변경
+	}
+	```
+##형변환
+계산할 값을 form에서 입력하면, 그 문자의 타입은 String이 아닌 String^입니다.
+aution class 내부의 함수를 실행시켜 계산 값을 얻기 위해서는 입력한 String^ 타입의 문자열을 정수형으로 변환한 뒤 aution class로 전달할 필요가 있었습니다.
+
+1. String^ -> String 형변환
+
+	```c++
+	// String^ -> String 형변환 함수
+	void MarshalString(String^ s, std::string& os) {
+		using namespace Runtime::InteropServices;
+		const char* chars =
+			(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
+		os = chars;
+		Marshal::FreeHGlobal(IntPtr((void*)chars));
+	}
+	
+	// String^ -> String
+	std::string change = "";
+	aution->MarshalString(this->textBox1->Text, change); // String^ -> String
+	```
+
+2. String -> double 형변환
+
+	```c++
+	// aution class의 price에 값 전달
+	this->aution->price = stod(change);
+	```
+
+3. int -> String 형변환
+
+	```c++
+	std::stringstream ssInt1; // Int -> String 하기 위한
+	ssInt1 << aution->equal_price; // int 값을 넣고
+	ssInt1.str() // int -> String
+	```
+
+4. String -> String^ 형변환
+
+	```c++
+	String^ str1 = gcnew String(ssInt1.str().data()); // String -> String^
+	```
+
+#### 내부 폼 양식은 `LostArk_M` 디렉토리의 `xxxForm.h` 입니다.
+
+#### 코멘트
+조원들이 공통적으로 할 수 있는 언어가 c++였기 때문에 c++로 GUI를 만들 수 있는 개발 툴 중 하나인 `Windows form`을 사용했습니다.
+`Windows form`이 대부분 c# 언어로 사용하기 때문에 c++ 버전의 자료를 찾는데 시간을 많이 소비했습니다. 결과적으로는 다 해결할 수 있었습니다.
+기본적인 GUI 컨셉으로 광운대를 대표하는 붉은색 계열의 색을 사용했습니다.
+
+
+#### 기여자 `광운대학교 이준희`  `광운대학교 양경원`  `광운대학교 장시원`
+
